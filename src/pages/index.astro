@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Home from '../layouts/Home.astro';
+import Projects from '../layouts/Projects.astro';
+import Skills from '../layouts/Skills.astro';
+import About from '../layouts/About.astro';
+import Footer from '../layouts/Footer.astro';
+import Nav from '../components/Nav';
+
+import "@fontsource/poppins"
+---
+
+<Layout title="Gerson Garayar - Frontend Developer">
+
+	<Nav client:load></Nav>
+	
+	<img class="fixed w-full h-screen -z-10 object-cover" src="fondo.jpg" alt="fondo">
+	
+	<header class="bg-gradient-to-t from-neutral-900 to-neutral-900/20">
+		<section class="max-w-6xl m-auto px-4 md:px-12">
+			<Home></Home>
+		</section>
+	</header>
+
+	<main class="bg-neutral-900">
+		<section class="max-w-6xl m-auto px-4 md:px-12">
+			<Projects></Projects>
+			<Skills></Skills>
+			<About></About>
+			<Footer></Footer>
+		</section>
+	</main>
+
+</Layout>
+
+<style>
+	body { font-family: "Poppins", sans-serif; }
+</style>
